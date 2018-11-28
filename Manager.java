@@ -9,21 +9,30 @@ package javaapplication42;
  *
  * @author Elias
  */
-public class Manager {
+public class Manager extends Employ {
     
     
-    String name;
-    String surname;
-    int salary;
     int bonus;
-    double age;
 
-    public Manager(String name, String surname, int salary, int bonus, double age) {
-        this.name = name;
-        this.surname = surname;
-        this.salary = salary;
+    public Manager(int bonus, String salary, String name, String surname, double age) {
+        super(salary, name, surname, age);
         this.bonus = bonus;
-        this.age = age;
+    }
+
+    public int getBonus() {
+        return bonus;
+    }
+
+    public void setBonus(int bonus) {
+        this.bonus = bonus;
+    }
+
+    public String getSalary() {
+        return salary;
+    }
+
+    public void setSalary(String salary) {
+        this.salary = salary;
     }
 
     public String getName() {
@@ -42,22 +51,6 @@ public class Manager {
         this.surname = surname;
     }
 
-    public int getSalary() {
-        return salary;
-    }
-
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
-
-    public int getBonus() {
-        return bonus;
-    }
-
-    public void setBonus(int bonus) {
-        this.bonus = bonus;
-    }
-
     public double getAge() {
         return age;
     }
@@ -65,6 +58,7 @@ public class Manager {
     public void setAge(double age) {
         this.age = age;
     }
+
     
     
 }

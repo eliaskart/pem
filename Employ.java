@@ -9,21 +9,13 @@ package javaapplication42;
  *
  * @author Elias
  */
-public class Employ {
+public class Employ  extends Person{
     
     String salary;
-    String name;
-    String surname;
-    double age;
 
     public Employ(String salary, String name, String surname, double age) {
+        super(name, surname, age);
         this.salary = salary;
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
-        
-        
-        
     }
 
     public String getSalary() {
@@ -57,7 +49,10 @@ public class Employ {
     public void setAge(double age) {
         this.age = age;
     }
-    
-    
-    
+
+
 }
+    
+    
+    
+
